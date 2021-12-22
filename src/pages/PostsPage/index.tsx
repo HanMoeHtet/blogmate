@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import GoNextLink from '../../components/GoNextLink';
 import GoPrevLink from '../../components/GoPrevLink';
 import Post from '../../components/Post';
@@ -99,7 +99,12 @@ const PostsPage: React.FC<PostsPageProps> = () => {
       {renderNavLinks()}
       {posts.map((post, index) => {
         return [
-          <Post key={post.id} {...post} asIncerpt={true}></Post>,
+          <Link
+            to={`/posts/${post.slug}`}
+            className="block hover:shadow-lg transition-shadow rounded-2xl"
+          >
+            <Post key={post.id} {...post} asIncerpt={true}></Post>
+          </Link>,
           index !== posts.length - 1 && (
             <div key={post.id + 'divider'} className="w-full p-4"></div>
           ),
