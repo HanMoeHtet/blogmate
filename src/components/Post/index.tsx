@@ -1,6 +1,5 @@
 import { format } from 'date-fns';
 import * as React from 'react';
-import { Link } from 'react-router-dom';
 import { GetPostResponse } from '../../services/post';
 
 interface PostProps extends GetPostResponse {
