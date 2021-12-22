@@ -6,7 +6,7 @@ interface MainProps {}
 
 const Main: React.FC<MainProps> = ({ children }) => {
   return (
-    <div className="min-h-screen p-12 bg-gray-50">
+    <div className="min-h-screen px-4 py-12 bg-gray-50">
       <header className="text-center mb-8">
         <h1 className="text-3xl font-bold text-purple-700">
           <Link to="/">
@@ -15,7 +15,7 @@ const Main: React.FC<MainProps> = ({ children }) => {
           </Link>
         </h1>
       </header>
-      <main className="w-1/2 max-w-32 mx-auto">{children}</main>
+      <main className="max-w-lg mx-auto">{children}</main>
     </div>
   );
 };
