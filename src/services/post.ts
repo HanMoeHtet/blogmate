@@ -17,7 +17,7 @@ export interface GetPostsResponse {
 }
 
 export const getPosts = ({ page }: GetPostsOptions = {}) => {
-  return api.get<GetPostsResponse>(`/posts?page=${page}`);
+  return api.get<GetPostsResponse>(`/posts?page=${page || ''}`);
 };
 
 export interface GetPostResponse {
